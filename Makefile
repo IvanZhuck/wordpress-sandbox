@@ -11,7 +11,7 @@ bash:
 	docker compose exec app bash
 
 phpcs:
-	./vendor/bin/phpcs
+	docker compose exec app bash -c "./vendor/bin/phpcs"
 
 wp:
 	docker compose exec app bash -c "wp $(WP_CLI_ACTION)"
