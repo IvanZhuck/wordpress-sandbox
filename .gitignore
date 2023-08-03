@@ -1,0 +1,36 @@
+# System
+.DS_Store
+.idea
+.vscode
+.vagrant
+
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/themes/twentytwentythree/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+web/app/cache/*
+web/app/debug.log
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Logs
+*.log
+npm-debug.log
+yarn-error.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor
+
+# WP-CLI
+wp-cli.local.yml

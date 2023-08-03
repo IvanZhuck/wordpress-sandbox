@@ -1,0 +1,21 @@
+version: "3.6"
+
+services:
+  nginx:
+    expose:
+      - 80
+      - 443
+    environment:
+      VIRTUAL_HOST: ${WP_HOST}
+      VIRTUAL_PORT: 443
+      VIRTUAL_PROTO: https
+    networks:
+      - wordpress
+      - proxy
+  app:
+    extra_hosts:
+      - host.docker.internal:host-gateway
+networks:
+  proxy:
+    name: nginx-proxy
+    external: true

@@ -1,0 +1,7 @@
+version: "3.6"
+
+services:
+  nginx:
+    ports:
+      - ${LOCAL_DEV_PORT_HTTP}:80
+      - ${LOCAL_DEV_PORT_HTTPS}:443

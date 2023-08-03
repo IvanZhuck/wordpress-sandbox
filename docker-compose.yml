@@ -1,0 +1,72 @@
+version: "3.6"
+
+services:
+  database:
+    image: mariadb:latest
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: wordpress-db
+    restart: always
+    ports:
+      - ${DB_LOCAL_PORT}:3306
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USER}
+    volumes:
+      - ./docker/mysql/dump:/docker-entrypoint-initdb.d
+      - ./docker/mysql/tmp:/var/lib/mysql
+      - ./docker/mysql/conf:/etc/mysql/conf.d
+    networks:
+      - wordpress
+  redis:
+    image: redis:latest
+    container_name: wordpress-redis
+    restart: always
+    volumes:
+      - ./docker/redis/redis.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server --requirepass secret
+    networks:
+      - wordpress
+  nginx:
+    image: nginx:latest
+    container_name: wordpress-nginx
+    restart: always
+    volumes:
+      - ./:/var/www/site
+      - ./docker/nginx/site.conf:/etc/nginx/conf.d/site.conf
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./docker/nginx/.htpasswd:/etc/nginx/.htpasswd
+      - ./docker/ssl:/etc/nginx/certs
+      - ./docker/logs/nginx:/var/log/nginx
+    environment:
+      NGINX_SERVER_NAME: ${NGINX_SERVER_NAME}
+    networks:
+      - wordpress
+    depends_on:
+      - app
+  app:
+    build:
+      args:
+        user: ${LOCAL_USER}
+        uid: ${LOCAL_UID}
+      context: ./
+      dockerfile: docker/php/Dockerfile
+    image: wordpress
+    container_name: wordpress-app
+    restart: always
+    working_dir: /var/www/site/
+    volumes:
+      - ./:/var/www/site
+      - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+      - ./docker/php/www.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ${LOCAL_SSH_PATH}:/home/${LOCAL_USER}/.ssh
+      - ./docker/imagemagick/policy.xml:/etc/ImageMagick-6/policy.xml
+    networks:
+      - wordpress
+    depends_on:
+      - database
+      - redis
+networks:
+  wordpress:
+    driver: bridge
