@@ -34,11 +34,11 @@ services:
     restart: always
     volumes:
       - ./:/var/www/site
-      - ./docker/nginx/site.conf:/etc/nginx/conf.d/site.conf
       - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./docker/nginx/.htpasswd:/etc/nginx/.htpasswd
       - ./docker/ssl:/etc/nginx/certs
       - ./docker/logs/nginx:/var/log/nginx
+      - ./docker/nginx/site.conf.template:/etc/nginx/templates/site.conf.template
     environment:
       NGINX_SERVER_NAME: ${NGINX_SERVER_NAME}
     networks:
