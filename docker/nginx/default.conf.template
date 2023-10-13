@@ -1,14 +1,11 @@
 server {
     listen 80;
-    server_name $NGINX_SERVER_NAME;
-    return 301 https://$http_host$request_uri;
+    server_name ${NGINX_SERVER_NAME};
+    return 301 https://$host:${LOCAL_DEV_PORT_HTTPS}$request_uri;
 }
 
 server {
     listen 443 ssl http2;
-
-    server_name $NGINX_SERVER_NAME;
-    root /var/www/site/web;
 
     ssl_certificate     /etc/nginx/certs/ssl.crt;
     ssl_certificate_key /etc/nginx/certs/ssl.key;
@@ -19,6 +16,9 @@ server {
     ssl_prefer_server_ciphers on;
     ssl_session_cache shared:SSL:20m;
     ssl_session_timeout 180m;
+
+    server_name ${NGINX_SERVER_NAME};
+    root /var/www/site/web;
 
     index index.html index.htm index.php;
 

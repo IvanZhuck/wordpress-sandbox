@@ -16,9 +16,10 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip \
     libzip-dev \
-    libmagickwand-dev
+    libmagickwand-dev \
+    openssl
 
-RUN curl -sL https://deb.nodesource.com/setup_19.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_20.x | bash -
 RUN apt-get update && apt-get install -y nodejs
 
 RUN npm install npm -g
@@ -61,4 +62,5 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 # Set working directory
 WORKDIR /var/www/site
 
+# Set user
 USER $user

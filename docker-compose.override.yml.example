@@ -9,6 +9,8 @@ services:
       VIRTUAL_HOST: ${WP_HOST}
       VIRTUAL_PORT: 443
       VIRTUAL_PROTO: https
+      LOCAL_DEV_PORT_HTTP: 80
+      LOCAL_DEV_PORT_HTTPS: 443
     networks:
       - wordpress
       - proxy

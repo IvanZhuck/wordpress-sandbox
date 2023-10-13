@@ -38,9 +38,11 @@ services:
       - ./docker/nginx/.htpasswd:/etc/nginx/.htpasswd
       - ./docker/ssl:/etc/nginx/certs
       - ./docker/logs/nginx:/var/log/nginx
-      - ./docker/nginx/site.conf.template:/etc/nginx/templates/site.conf.template
+      - ./docker/nginx/default.conf.template:/etc/nginx/templates/default.conf.template
     environment:
       NGINX_SERVER_NAME: ${NGINX_SERVER_NAME}
+      LOCAL_DEV_PORT_HTTP: ${LOCAL_DEV_PORT_HTTP}
+      LOCAL_DEV_PORT_HTTPS: ${LOCAL_DEV_PORT_HTTPS}
     networks:
       - wordpress
     depends_on:
@@ -50,6 +52,7 @@ services:
       args:
         user: ${LOCAL_USER}
         uid: ${LOCAL_UID}
+        hostname: ${LOCAL_HOSTNAME}
       context: ./
       dockerfile: docker/php/Dockerfile
     image: wordpress

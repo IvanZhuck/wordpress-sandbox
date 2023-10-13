@@ -35,3 +35,6 @@ yarn-error.log
 
 # WP-CLI
 wp-cli.local.yml
+
+# Docker
+docker-compose.override.yml
