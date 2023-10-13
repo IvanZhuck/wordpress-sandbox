@@ -1,7 +1,24 @@
 {
-  "name": "ivan_zhuck/wordpess",
+  "name": "ivanzhuck/wordpress-sandbox",
+  "description": "WordPress with Bedrock Boilerplate",
+  "keywords": [
+    "blog",
+    "cms",
+    "wordpress"
+  ],
   "type": "project",
-  "license": "MIT",
+  "license": [
+    "MIT",
+    "GPL-2.0-or-later"
+  ],
+  "authors": [
+    {
+      "name": "Ivan Zhuck",
+      "email": "i.a.zhuck@gmail.com",
+      "homepage": "https://izhuck.ru",
+      "role": "Developer"
+    }
+  ],
   "repositories": [
     {
       "type": "composer",
