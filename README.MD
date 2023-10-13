@@ -1,34 +1,40 @@
 # WordPress Sandbox
-A modern site boilerplate based on [roots/bedrock](https://roots.io/bedrock/) with docker and some magic
+A modern site boilerplate based on [roots/bedrock](https://roots.io/bedrock/) with docker and some code magic
 
 ## How to install and run:
 
 1 Clone the repository
+
 ```bash
 git clone git@github.com:IvanZhuck/wordpress-sandbox.git
 ```
 
 2 Go to the project directory
+
 ```bash
 cd wordpress-sandbox
 ```
 
 3 Copy file `.env.example` to `.env` and fill the environment variables
+
 ```bash
 cp .env.example .env
 ```
 
 4 Build the project
+
 ```bash
 make build
 ```
 
 5 Generate a self-signed SSL certificate and key
+
 ```bash
 make generate-ssl-keys
 ```
 
 6 Install composer dependencies
+
 ```bash
 make composer-install
 ```
@@ -43,11 +49,11 @@ LOCAL_DEV_PORT_HTTPS=44301
 ```
 
 ## Commands
-`make build` - build and run the project Docker containers
-`make up` - run the project Docker containers
-`make down` - stop the project Docker containers
-`make bash` - open app bash command line
-`make phpcs` / `make phpcbf` - run PHP Code Sniffer
-`make wp <wp_cli_action>` - execute WP CLI action
-`make generate-ssl-keys` - generate a self-signed SSL certificate and key
-`make composer-install` - install composer dependencies
+- `make build` - build and run the project Docker containers
+- `make up` - run the project Docker containers
+- `make down` - stop the project Docker containers
+- `make bash` - open app bash command line
+- `make phpcs` / `make phpcbf` - run PHP Code Sniffer
+- `make wp <wp_cli_action>` - execute WP CLI action
+- `make generate-ssl-keys` - generate a self-signed SSL certificate and key
+- `make composer-install` - install composer dependencies
