@@ -1,3 +1,6 @@
+#!make
+include .env
+
 build:
 	docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
 
@@ -27,7 +30,7 @@ generate-ssl-keys:
 		-nodes \
 		-out docker/ssl/ssl.crt \
 		-keyout docker/ssl/ssl.key \
-		-subj \"/C=RU/ST=Khabarovskiy Kray/L=Khabarovsk/O=WordPress/OU=IT Department/CN=$(WP_CLI_ACTION)\""
+		-subj \"/C=RU/ST=Khabarovskiy Kray/L=Khabarovsk/O=WordPress/OU=IT Department/CN=${LOCAL_HOSTNAME}\""
 
 composer-install:
 	docker compose exec app bash -c "composer install"
