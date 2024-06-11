@@ -28,6 +28,9 @@ wp-cron-run:
 wp-cron-list:
 	docker compose exec app bash -c "vendor/wp-cli/wp-cli/bin/wp cron event list"
 
+wp-update-translations:
+	docker compose exec app bash wp-cli-update-languages.sh ${WP_LANGUAGE}
+
 generate-ssl-keys:
 	docker compose exec app bash -c "openssl req -newkey rsa:4096 \
 		-x509 \

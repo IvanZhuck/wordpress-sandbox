@@ -15,6 +15,7 @@ web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/cache/*
 web/app/debug.log
+web/app/languages
 
 # WordPress
 web/wp
