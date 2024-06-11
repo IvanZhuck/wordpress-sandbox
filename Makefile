@@ -22,6 +22,12 @@ phpcbf:
 wp:
 	docker compose exec app bash -c "vendor/wp-cli/wp-cli/bin/wp $(WP_CLI_ACTION)"
 
+wp-cron-run:
+	docker compose exec app bash -c "vendor/wp-cli/wp-cli/bin/wp cron event run --due-now"
+
+wp-cron-list:
+	docker compose exec app bash -c "vendor/wp-cli/wp-cli/bin/wp cron event list"
+
 generate-ssl-keys:
 	docker compose exec app bash -c "openssl req -newkey rsa:4096 \
 		-x509 \
