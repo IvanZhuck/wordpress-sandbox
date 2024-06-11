@@ -55,8 +55,8 @@ LOCAL_DEV_PORT_HTTPS=44301
 - `make bash` - open app bash command line
 - `make phpcs` / `make phpcbf` - run PHP Code Sniffer
 - `make wp WP_CLI_ACTION="<wp_cli_action>"` - execute WP CLI action
-- `make wp-cron-run"` - run all scheduled cron events due right now
-- `make wp-cron-list"` - list scheduled cron events
-- `make wp-update-translations"` - install and activate the latest translations for the WP core and installed plugins/themes, you can change the language with the option `WP_LANGUAGE` in the `.env` file
+- `make wp-cron-run` - run all scheduled cron events due right now
+- `make wp-cron-list` - list scheduled cron events
+- `make wp-update-translations` - install and activate the latest translations for the WP core and installed plugins/themes, you can change the language with the option `WP_LANGUAGE` in the `.env` file
 - `make generate-ssl-keys` - generate a self-signed SSL certificate and key
 - `make composer-install` - install composer dependencies
