@@ -20,7 +20,7 @@ phpcbf:
 	docker compose exec app bash -c "./vendor/bin/phpcbf"
 
 wp:
-	docker compose exec app bash -c "wp $(WP_CLI_ACTION)"
+	docker compose exec app bash -c "vendor/wp-cli/wp-cli/bin/wp $(WP_CLI_ACTION)"
 
 generate-ssl-keys:
 	docker compose exec app bash -c "openssl req -newkey rsa:4096 \
