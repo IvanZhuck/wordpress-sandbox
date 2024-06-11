@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f18259feb6f5d6eccf08f9a9070518b",
+    "content-hash": "74ca959b7fa788489fd7b4b7d8baaa20",
     "packages": [
         {
             "name": "composer/installers",
@@ -479,7 +479,7 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "6.5",
+            "version": "6.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
@@ -510,7 +510,7 @@
             ],
             "support": {
                 "issues": "https://github.com/roots/wordpress/issues",
-                "source": "https://github.com/roots/wordpress/tree/6.5"
+                "source": "https://github.com/roots/wordpress/tree/6.5.4"
             },
             "funding": [
                 {
@@ -593,22 +593,22 @@
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "6.5",
+            "version": "6.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "6.5"
+                "reference": "6.5.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/release/wordpress-6.5-no-content.zip",
-                "shasum": "bc1bb88bbdedbea276cd09c13054765c532701db"
+                "url": "https://downloads.wordpress.org/release/wordpress-6.5.4-no-content.zip",
+                "shasum": "bb4d48b2f6f47f4c06061460c83f8453e9809af5"
             },
             "require": {
                 "php": ">= 7.0.0"
             },
             "provide": {
-                "wordpress/core-implementation": "6.5"
+                "wordpress/core-implementation": "6.5.4"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -659,7 +659,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2024-04-02T18:15:04+00:00"
+            "time": "2024-06-06T12:30:39+00:00"
         },
         {
             "name": "roots/wp-config",
