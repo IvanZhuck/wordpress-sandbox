@@ -7,6 +7,12 @@ build:
 up:
 	docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
 
+build-override:
+	docker compose -f docker-compose.yml -f docker-compose.dev.yml -f docker-compose.override.yml up -d --build
+
+up-override:
+	docker compose -f docker-compose.yml -f docker-compose.dev.yml -f docker-compose.override.yml up -d
+
 down:
 	docker compose down
 
