@@ -40,7 +40,7 @@
     "wp-cli/wp-cli-bundle": "2.10.0"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "^3.10.1",
+    "squizlabs/php_codesniffer": "^3.10.2",
     "roave/security-advisories": "dev-latest"
   },
   "config": {
