@@ -32,8 +32,13 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp
 RUN docker-php-ext-install mysqli pdo_mysql mbstring exif pcntl bcmath gd zip xml sockets
 
-RUN pecl install -o -f imagick \
-    &&  rm -rf /tmp/pear \
+RUN curl -L -o /tmp/imagick.tar.gz https://github.com/Imagick/imagick/archive/tags/3.7.0.tar.gz \
+    && tar --strip-components=1 -xf /tmp/imagick.tar.gz \
+    && sed -i 's/php_strtolower/zend_str_tolower/g' imagick.c \
+    && phpize \
+    && ./configure \
+    && make \
+    && make install \
     &&  docker-php-ext-enable imagick
 
 RUN pecl install -o -f redis \
