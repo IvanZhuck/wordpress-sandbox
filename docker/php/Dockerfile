@@ -1,4 +1,4 @@
-FROM php:8.3-fpm
+FROM php:8.4-fpm
 
 # Arguments defined in docker-compose.yml
 ARG user
@@ -19,11 +19,11 @@ RUN apt-get update && apt-get install -y \
     libmagickwand-dev \
     openssl
 
-RUN curl -sL https://deb.nodesource.com/setup_20.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_24.x | bash -
 RUN apt-get update && apt-get install -y nodejs
 
 RUN npm install npm -g
-RUN npm install --global yarn
+RUN npm install -g pnpm
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -32,7 +32,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp
 RUN docker-php-ext-install mysqli pdo_mysql mbstring exif pcntl bcmath gd zip xml sockets
 
-RUN curl -L -o /tmp/imagick.tar.gz https://github.com/Imagick/imagick/archive/tags/3.7.0.tar.gz \
+RUN curl -L -o /tmp/imagick.tar.gz https://github.com/Imagick/imagick/archive/tags/3.8.1.tar.gz \
     && tar --strip-components=1 -xf /tmp/imagick.tar.gz \
     && sed -i 's/php_strtolower/zend_str_tolower/g' imagick.c \
     && phpize \
