@@ -29,17 +29,17 @@
   "require": {
     "php": ">=8.4",
     "composer/installers": "^2.3",
-    "vlucas/phpdotenv": "^5.6.3",
+    "vlucas/phpdotenv": "^5.6.4",
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.1.0",
     "roots/bedrock-disallow-indexing": "^2.1.0",
-    "roots/wordpress": "7.0",
+    "roots/wordpress": "7.0.3",
     "roots/wp-config": "1.0.0",
     "wpackagist-theme/twentytwentythree": "1.6",
     "wp-cli/wp-cli-bundle": "2.12.0"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "^4.0.0"
+    "squizlabs/php_codesniffer": "^4.0.4"
   },
   "config": {
     "optimize-autoloader": true,
