@@ -24,6 +24,14 @@
       "type": "composer",
       "url": "https://wpackagist.org",
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    {
+      "type": "path",
+      "url": "local-plugins/*"
+    },
+    {
+      "type": "path",
+      "url": "local-themes/*"
     }
   ],
   "require": {
