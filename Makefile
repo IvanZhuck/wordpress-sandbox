@@ -52,3 +52,21 @@ composer-install:
 
 composer-update:
 	docker compose exec app bash -c "composer update"
+
+pnpm-install:
+	docker compose exec app bash -c "cd local-themes/izwp/src && pnpm install --dangerously-allow-all-builds"
+
+pnpm-build:
+	docker compose exec app bash -c "cd local-themes/izwp/src && pnpm build-scripts && pnpm build-styles"
+
+stylelint:
+	docker compose exec app bash -c "cd local-themes/izwp/src && pnpm stylelint"
+
+stylelint-fix:
+	docker compose exec app bash -c "cd local-themes/izwp/src && pnpm stylelint-fix"
+
+eslint:
+	docker compose exec app bash -c "cd local-themes/izwp/src && pnpm eslint"
+
+eslint-fix:
+	docker compose exec app bash -c "cd local-themes/izwp/src && pnpm eslint-fix"

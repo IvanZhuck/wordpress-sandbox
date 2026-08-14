@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a2efc241d5a15105f5c6b2482f3c58ef",
+    "content-hash": "d4d1521200618b7bb8ad486688e57d93",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1116,6 +1116,15 @@
                 "source": "https://github.com/jsonrainbow/json-schema/tree/6.10.0"
             },
             "time": "2026-06-16T20:50:26+00:00"
+        },
+        {
+            "name": "local-theme/izwp",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "local-themes/izwp/wp-theme"
+            },
+            "type": "wordpress-theme"
         },
         {
             "name": "marc-mabe/php-enum",
