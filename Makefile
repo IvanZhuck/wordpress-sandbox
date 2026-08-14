@@ -34,6 +34,9 @@ wp-cron-run:
 wp-cron-list:
 	docker compose exec app bash -c "vendor/wp-cli/wp-cli/bin/wp cron event list"
 
+wp-action-scheduler-run:
+	docker compose exec app bash -c "vendor/wp-cli/wp-cli/bin/wp action-scheduler run"
+
 wp-update-translations:
 	docker compose exec app bash wp-cli-update-languages.sh ${WP_LANGUAGE}
 
