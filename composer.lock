@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4d1521200618b7bb8ad486688e57d93",
+    "content-hash": "26427489b8fb41861e7a15fd25cf0e26",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1735,7 +1735,7 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "7.0.3",
+            "version": "7.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
@@ -1766,7 +1766,7 @@
             ],
             "support": {
                 "issues": "https://github.com/roots/wordpress/issues",
-                "source": "https://github.com/roots/wordpress/tree/7.0.3"
+                "source": "https://github.com/roots/wordpress/tree/7.0.4"
             },
             "funding": [
                 {
@@ -1845,23 +1845,23 @@
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "7.0.3",
+            "version": "7.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "7.0.3"
+                "reference": "7.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.w.org/release/wordpress-7.0.3-no-content.zip",
-                "reference": "7.0.3",
-                "shasum": "01b2b8fb953b747de9ac8176b6d05aae1cc410b6"
+                "url": "https://downloads.w.org/release/wordpress-7.0.4-no-content.zip",
+                "reference": "7.0.4",
+                "shasum": "c43ba63174abfef77d00fbc6041db0d801869e09"
             },
             "require": {
                 "php": ">= 7.4"
             },
             "provide": {
-                "wordpress/core-implementation": "7.0.3"
+                "wordpress/core-implementation": "7.0.4"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -1912,7 +1912,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-08-06T21:41:49+00:00"
+            "time": "2026-08-12T14:47:33+00:00"
         },
         {
             "name": "roots/wp-config",
@@ -2135,16 +2135,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v8.1.2",
+            "version": "v8.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "535e18a1b8925f6c01a55b171d157ab66c2ace15"
+                "reference": "68efa2ebfd9a362951eb5a8b09fd177c66ddec24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/535e18a1b8925f6c01a55b171d157ab66c2ace15",
-                "reference": "535e18a1b8925f6c01a55b171d157ab66c2ace15",
+                "url": "https://api.github.com/repos/symfony/console/zipball/68efa2ebfd9a362951eb5a8b09fd177c66ddec24",
+                "reference": "68efa2ebfd9a362951eb5a8b09fd177c66ddec24",
                 "shasum": ""
             },
             "require": {
@@ -2211,7 +2211,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v8.1.2"
+                "source": "https://github.com/symfony/console/tree/v8.1.4"
             },
             "funding": [
                 {
@@ -2231,7 +2231,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-07-27T13:58:19+00:00"
+            "time": "2026-07-31T12:43:13+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
