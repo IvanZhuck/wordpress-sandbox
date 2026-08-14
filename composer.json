@@ -44,7 +44,8 @@
     "roots/wordpress": "7.0.3",
     "roots/wp-config": "1.0.0",
     "wpackagist-theme/twentytwentythree": "1.6",
-    "wp-cli/wp-cli-bundle": "2.12.0"
+    "wp-cli/wp-cli-bundle": "2.12.0",
+    "woocommerce/action-scheduler": "^4.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^4.0.4"
@@ -61,7 +62,7 @@
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "woocommerce/action-scheduler"],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
