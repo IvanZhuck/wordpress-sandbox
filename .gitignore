@@ -39,3 +39,6 @@ wp-cli.local.yml
 
 # Docker
 docker-compose.override.yml
+
+#pnpm
+.pnpm-store
