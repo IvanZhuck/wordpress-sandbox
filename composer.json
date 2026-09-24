@@ -49,7 +49,7 @@
   "require": {
     "php": ">=8.4",
     "composer/installers": "^2.3",
-    "vlucas/phpdotenv": "^5.6.4",
+    "vlucas/phpdotenv": "^5.7.0",
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.1.0",
     "roots/bedrock-disallow-indexing": "^2.1.0",
@@ -57,7 +57,7 @@
     "roots/wp-config": "1.0.0",
     "wpackagist-theme/twentytwentythree": "1.7",
     "wp-cli/wp-cli-bundle": "2.12.0",
-    "woocommerce/action-scheduler": "^4.1",
+    "woocommerce/action-scheduler": "^4.2.0",
     "local-theme/izwp": "*"
   },
   "require-dev": {
