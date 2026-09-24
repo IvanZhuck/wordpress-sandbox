@@ -53,7 +53,7 @@
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.1.0",
     "roots/bedrock-disallow-indexing": "^2.1.0",
-    "roots/wordpress": "7.1",
+    "roots/wordpress": "7.1.2",
     "roots/wp-config": "1.0.0",
     "wpackagist-theme/twentytwentythree": "1.7",
     "wp-cli/wp-cli-bundle": "2.12.0",
